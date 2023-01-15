@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{a3ac4660-71c1-4843-87bb-5e9f8e269b16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{e675646b-6530-4fdd-8ab5-737cb7803ad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\contrib">
+      <UniqueIdentifier>{a693b45e-a016-4fb9-bd6c-7b1dae223b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\node">
+      <UniqueIdentifier>{0cd07112-6443-45a1-8c9b-6a6d8688bf67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\node\detail">
+      <UniqueIdentifier>{ea685621-7229-4b09-a2fb-a4473e60060a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\contrib">
+      <UniqueIdentifier>{a3cb245f-4607-4889-bbdf-92b25b58cafe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\yaml-cpp\anchor.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\binary.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\depthguard.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\dll.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\emitfromevents.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\emitter.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\emitterdef.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\emittermanip.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\emitterstyle.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\eventhandler.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\exceptions.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\mark.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\noexcept.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\null.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\ostream_wrapper.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\parser.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\stlemitter.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\traits.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\yaml.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\contrib\anchordict.h">
+      <Filter>Include\contrib</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\contrib\graphbuilder.h">
+      <Filter>Include\contrib</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\convert.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\emit.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\impl.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\iterator.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\node.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\parse.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\ptr.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\type.h">
+      <Filter>Include\node</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\impl.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\iterator.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\iterator_fwd.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\memory.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\node.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\node_data.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\node_iterator.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\yaml-cpp\node\detail\node_ref.h">
+      <Filter>Include\node\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\collectionstack.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\directives.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\emitterstate.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\emitterutils.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\exp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\indentation.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\nodebuilder.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\nodeevents.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ptr_vector.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\regex_yaml.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\regeximpl.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\scanner.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\scanscalar.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\scantag.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\setting.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\singledocparser.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\stream.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\streamcharsource.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\stringsource.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tag.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\token.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\contrib\graphbuilderadapter.h">
+      <Filter>Source\contrib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\binary.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\convert.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\depthguard.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\directives.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\emit.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\emitfromevents.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\emitter.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\emitterstate.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\emitterutils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\exceptions.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\exp.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\memory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\node.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\node_data.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\nodebuilder.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\nodeevents.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\null.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ostream_wrapper.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\parse.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\parser.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\regex_yaml.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\scanner.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\scanscalar.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\scantag.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\scantoken.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\simplekey.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\singledocparser.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\stream.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tag.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\contrib\graphbuilder.cpp">
+      <Filter>Source\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\contrib\graphbuilderadapter.cpp">
+      <Filter>Source\contrib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="Source\contrib\yaml-cpp.natvis">
+      <Filter>Source\contrib</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CONTRIBUTING.md" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>
