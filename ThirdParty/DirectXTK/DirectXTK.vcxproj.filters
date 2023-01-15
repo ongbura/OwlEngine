@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{771f5f80-d173-49c3-8afb-790e8f7cb0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{c52e19b6-8703-49a1-9b36-101a05b4745d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Shared">
+      <UniqueIdentifier>{e07ba3bc-b69f-4ded-9ffa-3b47427e9fef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Shared">
+      <UniqueIdentifier>{28e934ed-a6d7-4c30-b064-c72c50c99626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Shaders">
+      <UniqueIdentifier>{28d5fa16-99e2-471c-8cd8-2020e81f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Shaders\Shared">
+      <UniqueIdentifier>{34676173-31f5-4435-b90d-a0ad4f7d163c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\CommonStates.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ScreenGrab.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SpriteBatch.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PrimitiveBatch.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SpriteFont.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\VertexTypes.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\pch.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GeometricPrimitive.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\EffectCommon.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Effects.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DDSTextureLoader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WICTextureLoader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Model.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DirectXHelpers.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GamePad.h">
+      <Filter>Include\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Keyboard.h">
+      <Filter>Include\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Mouse.h">
+      <Filter>Include\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SimpleMath.inl">
+      <Filter>Include\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SimpleMath.h">
+      <Filter>Include\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AlignedNew.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Bezier.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BinaryReader.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DDS.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DemandCreate.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PlatformHelpers.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GraphicsMemory.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDKMesh.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SharedResourcePool.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\vbo.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Geometry.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LoaderHelpers.h">
+      <Filter>Source\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PostProcess.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\BufferHelpers.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\CommonStates.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\pch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteBatch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PrimitiveBatch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFont.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VertexTypes.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BasicEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GeometricPrimitive.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EffectCommon.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EffectFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SkinnedEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AlphaTestEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DualTextureEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EnvironmentMapEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DDSTextureLoader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WICTextureLoader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ScreenGrab.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ModelLoadCMO.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ModelLoadSDKMESH.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Model.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DGSLEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DGSLEffectFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ModelLoadVBO.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GraphicsMemory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BinaryReader.cpp">
+      <Filter>Source\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GamePad.cpp">
+      <Filter>Source\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Keyboard.cpp">
+      <Filter>Source\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Mouse.cpp">
+      <Filter>Source\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SimpleMath.cpp">
+      <Filter>Source\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Geometry.cpp">
+      <Filter>Source\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\NormalMapEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BasicPostProcess.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DualPostProcess.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ToneMapPostProcess.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PBREffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DebugEffect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PBREffectFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BufferHelpers.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DirectXHelpers.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\CompileShaders.cmd">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\SpriteEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\BasicEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\AlphaTestEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\DualTextureEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\EnvironmentMapEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\SkinnedEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\DGSLEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\DGSLPhong.hlsl">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\DGSLUnlit.hlsl">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\DGSLLambert.hlsl">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\TeapotData.inc">
+      <Filter>Source\Shared</Filter>
+    </None>
+    <None Include="Source\Shaders\Common.fxh">
+      <Filter>Source\Shaders\Shared</Filter>
+    </None>
+    <None Include="Source\Shaders\Lighting.fxh">
+      <Filter>Source\Shaders\Shared</Filter>
+    </None>
+    <None Include="Source\Shaders\Structures.fxh">
+      <Filter>Source\Shaders\Shared</Filter>
+    </None>
+    <None Include="Source\Shaders\NormalMapEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\PostProcess.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\ToneMap.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\Utilities.fxh">
+      <Filter>Source\Shaders\Shared</Filter>
+    </None>
+    <None Include="Source\Shaders\PBREffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\PBRCommon.fxh">
+      <Filter>Source\Shaders\Shared</Filter>
+    </None>
+    <None Include="Source\Shaders\DebugEffect.fx">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\PixelPacking_Velocity.hlsli">
+      <Filter>Source\Shaders\Shared</Filter>
+    </None>
+    <None Include="Source\Shaders\Skinning.fxh">
+      <Filter>Source\Shaders\Shared</Filter>
+    </None>
+    <None Include="HISTORY.md" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+    <None Include="SECURITY.md" />
+  </ItemGroup>
+</Project>
