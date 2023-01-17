@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{ba1c0e9f-fcf5-4d9e-89e3-fb4ecf4a62af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{ee8812f9-8c8c-4838-84b9-07cf01d14547}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\small.ico">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="Resource\OwlEngine.ico">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\OwlEngine.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
