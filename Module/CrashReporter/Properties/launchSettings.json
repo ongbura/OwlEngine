@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CrashReporter": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Default Log Path\" \"Default Call Stack\""
+    }
+  }
+}

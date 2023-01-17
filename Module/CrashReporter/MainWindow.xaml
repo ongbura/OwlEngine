@@ -1,0 +1,97 @@
+﻿<Window x:Class="CrashReporter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrashReporter"
+        mc:Ignorable="d"
+        Title="OwlEngine CrashReporter"
+        Height="515" Width="800"
+        MinHeight="515" MinWidth="800"
+        Background="#FF050505"
+        Icon="/Resources/small.ico"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="None" ImageSource="/Resources/BackGround.png" AlignmentX="Center" AlignmentY="Center" />
+        </Grid.Background>
+        <StackPanel Margin="30, 20, 30, 20">
+            <Label Content="OwlEngine has crashed!"
+                   Foreground="#FFF27CEA"
+                   FontSize="20"
+                   FontFamily="Malgun Gothic" Padding="0,0,5,0">
+            </Label>
+            <Label FontSize="15"
+                   Foreground="#FFF27CEA"
+                   Margin="0, 10, 0, 15"
+                   Padding="0" FontWeight="Normal"
+                   Content="{Binding Path=(local:MainWindow.LogPath)}">
+            </Label>
+            <TextBlock Foreground="White"
+                       FontFamily="Malgun Gothic"
+                       FontSize="13" Margin="0,0,0,10" LineHeight="16">
+                We are very sorry that this crash occurred. Please check the log.
+                <LineBreak />
+                If you provide us with detailed information about this crash, it will be of great help to improve the program.
+                <LineBreak />
+                Or you can create a issue from OwlEngine github repository.
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,7">
+                <Image Width="24" Height="24" Source="/Resources/Github.png" />
+                <TextBlock FontSize="13" Margin="10,0,0,0" Padding="0, 5, 0, 5">
+                    <Hyperlink NavigateUri="https://github.com/Ongbular/OwlEngine"
+                               RequestNavigate="Hyperlink_GitHubRepo"
+                               Foreground="#FFF27CEA">
+                        https://github.com/Ongbular/OwlEngine
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+            <TextBox Margin="0, 10, 0, 10" 
+                     Background="#E51C1D1F" 
+                     Height="210"
+                     FontSize="14"
+                     Foreground="#FFF27CEA"
+                     IsReadOnly="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     AcceptsReturn="True" FontWeight="Bold" Cursor="Arrow" ForceCursor="True"
+                     Text="{Binding Path=(local:MainWindow.CallStack)}">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="BorderBrush" Value="LightGray"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#FFF27CEA"/>
+                                <Setter Property="BorderThickness" Value="1"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button FontSize="13"
+                        Margin="0, 5, 0, 5"
+                        Padding="5, 3, 5, 3"
+                        Background="Black" Foreground="#FFF27CEA">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    Restart
+                </Button>
+                <Button FontSize="13"
+                        Margin="10, 5, 0, 5"
+                        Padding="5, 3, 5, 3"
+                        Background="Black" Foreground="#FFF27CEA">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    Close
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

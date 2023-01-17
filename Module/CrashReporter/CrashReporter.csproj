@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>CrashReporter.App</StartupObject>
+    <ApplicationIcon>Resources\OwlEngine.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	  <OutputPath>$(SolutionDir)Binaries\$(Configuration)\</OutputPath>
+	  <IntermediateOutputPath>$(SolutionDir)Intermediate\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\BackGround.png" />
+    <None Remove="Resources\Github.png" />
+    <None Remove="Resources\OwlEngine.ico" />
+    <None Remove="Resources\small.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\BackGround.png" />
+    <Resource Include="Resources\Github.png" />
+    <Resource Include="Resources\OwlEngine.ico" />
+    <Resource Include="Resources\small.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
