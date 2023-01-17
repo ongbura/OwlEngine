@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Logger">
+      <UniqueIdentifier>{510fbe11-566c-4e45-acf7-1a44fed53b41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assertion">
+      <UniqueIdentifier>{e8ea3928-c166-4479-89ae-8e4da729e9b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{95e36ed5-21eb-47c3-bba0-05a818400e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{9672d6b0-316c-421a-b82a-113aeb58c686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegate">
+      <UniqueIdentifier>{5ef324f3-d621-44f6-a47e-73859278e10f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Logger\Logger.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CorePCH.h" />
+    <ClInclude Include="Source\CoreTypes.h" />
+    <ClInclude Include="Source\CoreDLL.h" />
+    <ClInclude Include="Source\Misc\Paths.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\DelegateBase.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\DelegateEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\DelegateHandle.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\DelegateRawEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\DelegateSharedEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\DelegateStaticEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\MultiCastDelegate.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\TypeDefine.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Delegate\UniCastDelegate.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Logger\ScopedLogLevel.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Assertion\Assertion.h">
+      <Filter>Assertion</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CoreAPI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Logger\Logger.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CorePCH.cpp" />
+    <ClCompile Include="Source\Misc\Paths.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Logger\ScopedLogLevel.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Assertion\Assertion.cpp">
+      <Filter>Assertion</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
