@@ -344,6 +344,9 @@
     <ClInclude Include="Include\spdlog\sinks\wincolor_sink-inl.h">
       <Filter>Include\sinks</Filter>
     </ClInclude>
+    <ClInclude Include="Include\spdlog\sinks\wostream_sink.h">
+      <Filter>Include\sinks</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Include\spdlog\fmt\bundled\fmt.license.rst">

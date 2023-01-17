@@ -122,6 +122,7 @@
     <ClInclude Include="Include\spdlog\sinks\wincolor_sink-inl.h" />
     <ClInclude Include="Include\spdlog\sinks\wincolor_sink.h" />
     <ClInclude Include="Include\spdlog\sinks\win_eventlog_sink.h" />
+    <ClInclude Include="Include\spdlog\sinks\wostream_sink.h" />
     <ClInclude Include="Include\spdlog\spdlog-inl.h" />
     <ClInclude Include="Include\spdlog\spdlog.h" />
     <ClInclude Include="Include\spdlog\stopwatch.h" />
