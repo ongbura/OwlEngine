@@ -3,8 +3,8 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <ModuleDir>$(SolutionDir)Module\</ModuleDir>
+    <IncludeDir>$(ProjectDir)Include\</IncludeDir>
     <SourceDir>$(ProjectDir)Source\</SourceDir>
-    <ThirdPartyDir>$(SolutionDir)ThirdParty\</ThirdPartyDir>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)Binaries\$(Configuration)\</OutDir>
@@ -18,7 +18,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SourceDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(IncludeDir);$(SourceDir);$(IncludeDir)ThirdParty\;$(SourceDir)ThirdParty\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4231;</DisableSpecificWarnings>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -26,11 +26,11 @@
     <BuildMacro Include="ModuleDir">
       <Value>$(ModuleDir)</Value>
     </BuildMacro>
+    <BuildMacro Include="IncludeDir">
+      <Value>$(IncludeDir)</Value>
+    </BuildMacro>
     <BuildMacro Include="SourceDir">
       <Value>$(SourceDir)</Value>
-    </BuildMacro>
-    <BuildMacro Include="ThirdPartyDir">
-      <Value>$(ThirdPartyDir)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

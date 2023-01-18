@@ -1,5 +1,5 @@
 #include "CorePCH.h"
-#include "ScopedLogLevel.h"
+#include "Logger/ScopedLogLevel.h"
 
 ScopedLogLevel::ScopedLogLevel(const ELogLevel level)
 	: mCached(Logger::GetLevel())

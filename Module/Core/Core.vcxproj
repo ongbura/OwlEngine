@@ -19,35 +19,174 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Assertion\Assertion.h" />
-    <ClInclude Include="Source\CoreAPI.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\args.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\chrono.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\color.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\compile.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\core.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\format-inl.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\format.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\os.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\ostream.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\printf.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\ranges.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\std.h" />
+    <ClInclude Include="Include\ThirdParty\fmt\xchar.h" />
+    <ClInclude Include="Source\Debug\DebugHelper.h" />
+    <ClInclude Include="Include\CoreAPI.h" />
+    <ClInclude Include="Include\CoreAssert.h" />
+    <ClInclude Include="Include\CoreTypes.h" />
+    <ClInclude Include="Include\Delegate\DelegateBase.h" />
+    <ClInclude Include="Include\Delegate\DelegateEvent.h" />
+    <ClInclude Include="Include\Delegate\DelegateHandle.h" />
+    <ClInclude Include="Include\Delegate\DelegateRawEvent.h" />
+    <ClInclude Include="Include\Delegate\DelegateSharedEvent.h" />
+    <ClInclude Include="Include\Delegate\DelegateStaticEvent.h" />
+    <ClInclude Include="Include\Delegate\MultiCastDelegate.h" />
+    <ClInclude Include="Include\Delegate\TypeDefine.h" />
+    <ClInclude Include="Include\Delegate\UniCastDelegate.h" />
+    <ClInclude Include="Include\Logger\Logger.h" />
+    <ClInclude Include="Include\Logger\ScopedLogLevel.h" />
+    <ClInclude Include="Include\Misc\Paths.h" />
     <ClInclude Include="Source\CoreDLL.h" />
     <ClInclude Include="Source\CorePCH.h" />
-    <ClInclude Include="Source\CoreTypes.h" />
-    <ClInclude Include="Source\Delegate\DelegateBase.h" />
-    <ClInclude Include="Source\Delegate\DelegateEvent.h" />
-    <ClInclude Include="Source\Delegate\DelegateHandle.h" />
-    <ClInclude Include="Source\Delegate\DelegateRawEvent.h" />
-    <ClInclude Include="Source\Delegate\DelegateSharedEvent.h" />
-    <ClInclude Include="Source\Delegate\DelegateStaticEvent.h" />
-    <ClInclude Include="Source\Delegate\MultiCastDelegate.h" />
-    <ClInclude Include="Source\Delegate\TypeDefine.h" />
-    <ClInclude Include="Source\Delegate\UniCastDelegate.h" />
-    <ClInclude Include="Source\Logger\Logger.h" />
-    <ClInclude Include="Source\Logger\ScopedLogLevel.h" />
-    <ClInclude Include="Source\Misc\Paths.h" />
+    <ClInclude Include="Source\Debug\StackWalker.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\async.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\async_logger-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\async_logger.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\argv.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\env.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\helpers-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\helpers.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\common-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\common.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\backtracer-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\backtracer.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\circular_q.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\console_globals.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\file_helper-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\file_helper.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\fmt_helper.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg_buffer-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg_buffer.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\mpmc_blocking_q.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\null_mutex.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\os-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\os.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\periodic_worker-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\periodic_worker.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\registry-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\registry.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\synchronous_factory.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\tcp_client-windows.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\tcp_client.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\thread_pool-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\thread_pool.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\udp_client-windows.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\udp_client.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\details\windows_include.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\formatter.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\fwd.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\logger-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\logger.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\pattern_formatter-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\pattern_formatter.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\android_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ansicolor_sink-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ansicolor_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\base_sink-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\base_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\basic_file_sink-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\basic_file_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\daily_file_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\dist_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\dup_filter_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\hourly_file_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\mongo_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\msvc_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\null_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ostream_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\qt_sinks.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ringbuffer_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\rotating_file_sink-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\rotating_file_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\sink-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_color_sinks-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_color_sinks.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_sinks-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_sinks.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\syslog_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\systemd_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\tcp_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\udp_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\wincolor_sink-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\wincolor_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\win_eventlog_sink.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\spdlog-inl.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\spdlog.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\stopwatch.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\tweakme.h" />
+    <ClInclude Include="Source\ThirdParty\spdlog\version.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Assertion\Assertion.cpp" />
+    <ClCompile Include="Source\CoreAPI.cpp" />
+    <ClCompile Include="Source\Debug\DebugHelper.cpp" />
+    <ClCompile Include="Source\CoreAssert.cpp" />
     <ClCompile Include="Source\CorePCH.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Source\Debug\StackWalker.cpp" />
     <ClCompile Include="Source\Logger\Logger.cpp" />
     <ClCompile Include="Source\Logger\ScopedLogLevel.cpp" />
     <ClCompile Include="Source\Misc\Paths.cpp" />
+    <ClCompile Include="Source\ThirdParty\fmt\fmt.cc" />
+    <ClCompile Include="Source\ThirdParty\fmt\format.cc" />
+    <ClCompile Include="Source\ThirdParty\fmt\os.cc" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\async.cpp" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\bundled_fmtlib_format.cpp" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\cfg.cpp" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\color_sinks.cpp" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\file_sinks.cpp" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\spdlog.cpp" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\stdout_sinks.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Include\ThirdParty\Eigen\Cholesky" />
+    <None Include="Include\ThirdParty\Eigen\CholmodSupport" />
+    <None Include="Include\ThirdParty\Eigen\Core" />
+    <None Include="Include\ThirdParty\Eigen\Dense" />
+    <None Include="Include\ThirdParty\Eigen\Eigen" />
+    <None Include="Include\ThirdParty\Eigen\Eigenvalues" />
+    <None Include="Include\ThirdParty\Eigen\Geometry" />
+    <None Include="Include\ThirdParty\Eigen\Householder" />
+    <None Include="Include\ThirdParty\Eigen\IterativeLinearSolvers" />
+    <None Include="Include\ThirdParty\Eigen\Jacobi" />
+    <None Include="Include\ThirdParty\Eigen\KLUSupport" />
+    <None Include="Include\ThirdParty\Eigen\LU" />
+    <None Include="Include\ThirdParty\Eigen\MetisSupport" />
+    <None Include="Include\ThirdParty\Eigen\OrderingMethods" />
+    <None Include="Include\ThirdParty\Eigen\PardisoSupport" />
+    <None Include="Include\ThirdParty\Eigen\PaStiXSupport" />
+    <None Include="Include\ThirdParty\Eigen\QR" />
+    <None Include="Include\ThirdParty\Eigen\QtAlignedMalloc" />
+    <None Include="Include\ThirdParty\Eigen\Sparse" />
+    <None Include="Include\ThirdParty\Eigen\SparseCholesky" />
+    <None Include="Include\ThirdParty\Eigen\SparseCore" />
+    <None Include="Include\ThirdParty\Eigen\SparseLU" />
+    <None Include="Include\ThirdParty\Eigen\SparseQR" />
+    <None Include="Include\ThirdParty\Eigen\SPQRSupport" />
+    <None Include="Include\ThirdParty\Eigen\StdDeque" />
+    <None Include="Include\ThirdParty\Eigen\StdList" />
+    <None Include="Include\ThirdParty\Eigen\StdVector" />
+    <None Include="Include\ThirdParty\Eigen\SuperLUSupport" />
+    <None Include="Include\ThirdParty\Eigen\SVD" />
+    <None Include="Include\ThirdParty\Eigen\UmfPackSupport" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -121,11 +260,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(SolutionDir))";SOLUTION_DIR=R"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(SolutionDir))";SOLUTION_DIR=LR"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ThirdPartyDir)\spdlog\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\yaml-cpp\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -139,11 +278,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(OutDir))";SOLUTION_DIR=R"()";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(OutDir))";SOLUTION_DIR=LR"()";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ThirdPartyDir)\spdlog\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\yaml-cpp\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -157,11 +296,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(SolutionDir))";SOLUTION_DIR=R"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(SolutionDir))";SOLUTION_DIR=LR"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ThirdPartyDir)\spdlog\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\yaml-cpp\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -175,11 +314,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(OutDir))";SOLUTION_DIR=R"()";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;ENGINE_DIR=LR"($(OutDir))";SOLUTION_DIR=LR"()";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ThirdPartyDir)\spdlog\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\yaml-cpp\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

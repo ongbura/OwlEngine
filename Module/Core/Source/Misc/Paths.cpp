@@ -1,5 +1,5 @@
 #include "CorePCH.h"
-#include "Paths.h"
+#include "Misc/Paths.h"
 
 #define LOG_DIR TEXT(R"(Logs\)")
 #define ENGINE_CONTENT_DIR TEXT(R"(Content\Engine\)")

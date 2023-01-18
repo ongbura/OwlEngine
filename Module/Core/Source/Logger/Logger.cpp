@@ -1,8 +1,12 @@
 #include "CorePCH.h"
-#include "Logger.h"
+#include "Logger/Logger.h"
 
 #include "Misc/Paths.h"
+
+#pragma warning( disable : 4819 26450 26451 26437 4804 26498 26800 26812 26498 26495 4806 6285 )
+
 #include "spdlog/sinks/ostream_sink.h"
+#pragma warning( default : 4819 26450 26451 26437 4804 26498 26800 26812 26498 26495 4806 6285 )
 
 void Logger::Initialize()
 {

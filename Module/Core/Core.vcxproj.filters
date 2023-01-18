@@ -4,9 +4,6 @@
     <Filter Include="Logger">
       <UniqueIdentifier>{510fbe11-566c-4e45-acf7-1a44fed53b41}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Assertion">
-      <UniqueIdentifier>{e8ea3928-c166-4479-89ae-8e4da729e9b6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Misc">
       <UniqueIdentifier>{95e36ed5-21eb-47c3-bba0-05a818400e50}</UniqueIdentifier>
     </Filter>
@@ -16,65 +13,499 @@
     <Filter Include="Delegate">
       <UniqueIdentifier>{5ef324f3-d621-44f6-a47e-73859278e10f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{039891ae-9155-45e0-8700-b706ff44db9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{48487b11-5df5-4325-9d0c-bba63611dff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\fmt">
+      <UniqueIdentifier>{50c8e4c0-eb1a-41b3-92a6-c9660e34f1ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\spdlog">
+      <UniqueIdentifier>{6a3c13b5-a3e2-436a-9d18-9fd131e4d240}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\Eigen">
+      <UniqueIdentifier>{83b528fc-efc5-4d3d-b39b-1900cc12fb07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\spdlog\cfg">
+      <UniqueIdentifier>{ea80220b-87d9-41b7-8861-507e05ddf52d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\spdlog\details">
+      <UniqueIdentifier>{c45c65c0-aaf1-448b-a04c-14423e7c1c17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\spdlog\sinks">
+      <UniqueIdentifier>{087a3e2a-8f01-499d-b8ba-7cee48c4117e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\spdlog\src">
+      <UniqueIdentifier>{a2b72a14-8b24-4834-a3d0-ce088b68d99b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Logger\Logger.h">
-      <Filter>Logger</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CorePCH.h" />
-    <ClInclude Include="Source\CoreTypes.h" />
-    <ClInclude Include="Source\CoreDLL.h" />
-    <ClInclude Include="Source\Misc\Paths.h">
+    <ClInclude Include="Include\CoreAPI.h" />
+    <ClInclude Include="Include\CoreAssert.h" />
+    <ClInclude Include="Include\CoreTypes.h" />
+    <ClInclude Include="Include\Misc\Paths.h">
       <Filter>Misc</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Delegate\DelegateBase.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\DelegateEvent.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\DelegateHandle.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\DelegateRawEvent.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\DelegateSharedEvent.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\DelegateStaticEvent.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\MultiCastDelegate.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\TypeDefine.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Delegate\UniCastDelegate.h">
-      <Filter>Delegate</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Logger\ScopedLogLevel.h">
+    <ClInclude Include="Include\Logger\Logger.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Assertion\Assertion.h">
-      <Filter>Assertion</Filter>
+    <ClInclude Include="Include\Logger\ScopedLogLevel.h">
+      <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CoreAPI.h" />
+    <ClInclude Include="Include\Delegate\DelegateBase.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\DelegateEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\DelegateHandle.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\DelegateRawEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\DelegateSharedEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\DelegateStaticEvent.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\MultiCastDelegate.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\TypeDefine.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegate\UniCastDelegate.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CoreDLL.h" />
+    <ClInclude Include="Source\CorePCH.h" />
+    <ClInclude Include="Source\Debug\StackWalker.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Debug\DebugHelper.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\async.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\async_logger.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\async_logger-inl.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\common.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\common-inl.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\formatter.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\fwd.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\logger.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\logger-inl.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\pattern_formatter.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\pattern_formatter-inl.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\spdlog.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\spdlog-inl.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\stopwatch.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\tweakme.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\version.h">
+      <Filter>ThirdParty\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\argv.h">
+      <Filter>ThirdParty\spdlog\cfg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\env.h">
+      <Filter>ThirdParty\spdlog\cfg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\helpers.h">
+      <Filter>ThirdParty\spdlog\cfg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\cfg\helpers-inl.h">
+      <Filter>ThirdParty\spdlog\cfg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\backtracer.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\backtracer-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\circular_q.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\console_globals.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\file_helper.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\file_helper-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\fmt_helper.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg_buffer.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg_buffer-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\log_msg-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\mpmc_blocking_q.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\null_mutex.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\os.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\os-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\periodic_worker.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\periodic_worker-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\registry.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\registry-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\synchronous_factory.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\tcp_client.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\tcp_client-windows.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\thread_pool.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\thread_pool-inl.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\udp_client.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\udp_client-windows.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\details\windows_include.h">
+      <Filter>ThirdParty\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\android_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ansicolor_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ansicolor_sink-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\base_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\base_sink-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\basic_file_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\basic_file_sink-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\daily_file_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\dist_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\dup_filter_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\hourly_file_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\mongo_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\msvc_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\null_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ostream_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\qt_sinks.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\ringbuffer_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\rotating_file_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\rotating_file_sink-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\sink-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_color_sinks.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_color_sinks-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_sinks.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\stdout_sinks-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\syslog_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\systemd_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\tcp_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\udp_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\win_eventlog_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\wincolor_sink.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThirdParty\spdlog\sinks\wincolor_sink-inl.h">
+      <Filter>ThirdParty\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\args.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\chrono.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\color.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\compile.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\core.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\format.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\format-inl.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\os.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\ostream.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\printf.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\ranges.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\std.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ThirdParty\fmt\xchar.h">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Logger\Logger.cpp">
-      <Filter>Logger</Filter>
-    </ClCompile>
+    <ClCompile Include="Source\CoreAssert.cpp" />
     <ClCompile Include="Source\CorePCH.cpp" />
     <ClCompile Include="Source\Misc\Paths.cpp">
       <Filter>Misc</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Logger\Logger.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Logger\ScopedLogLevel.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Assertion\Assertion.cpp">
-      <Filter>Assertion</Filter>
+    <ClCompile Include="Source\Debug\StackWalker.cpp">
+      <Filter>Debug</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Debug\DebugHelper.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CoreAPI.cpp" />
+    <ClCompile Include="Source\ThirdParty\spdlog\src\async.cpp">
+      <Filter>ThirdParty\spdlog\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\spdlog\src\bundled_fmtlib_format.cpp">
+      <Filter>ThirdParty\spdlog\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\spdlog\src\cfg.cpp">
+      <Filter>ThirdParty\spdlog\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\spdlog\src\color_sinks.cpp">
+      <Filter>ThirdParty\spdlog\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\spdlog\src\file_sinks.cpp">
+      <Filter>ThirdParty\spdlog\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\spdlog\src\spdlog.cpp">
+      <Filter>ThirdParty\spdlog\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\spdlog\src\stdout_sinks.cpp">
+      <Filter>ThirdParty\spdlog\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\fmt\fmt.cc">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\fmt\format.cc">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThirdParty\fmt\os.cc">
+      <Filter>ThirdParty\fmt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Include\ThirdParty\Eigen\Cholesky">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\CholmodSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Core">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Dense">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Eigen">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Eigenvalues">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Geometry">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Householder">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\IterativeLinearSolvers">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Jacobi">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\KLUSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\LU">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\MetisSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\OrderingMethods">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\PardisoSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\PaStiXSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\QR">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\QtAlignedMalloc">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\Sparse">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\SparseCholesky">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\SparseCore">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\SparseLU">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\SparseQR">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\SPQRSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\StdDeque">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\StdList">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\StdVector">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\SuperLUSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\SVD">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
+    <None Include="Include\ThirdParty\Eigen\UmfPackSupport">
+      <Filter>ThirdParty\Eigen</Filter>
+    </None>
   </ItemGroup>
 </Project>
