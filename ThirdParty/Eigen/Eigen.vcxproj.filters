@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{d06fd2b6-c341-4a37-be94-2a3cd5564c7d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\Eigen\Cholesky">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\CholmodSupport">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Core">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Dense">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Eigen">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Eigenvalues">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Geometry">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Householder">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\IterativeLinearSolvers">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Jacobi">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\KLUSupport">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\LU">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\MetisSupport">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\OrderingMethods">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\PardisoSupport">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\PaStiXSupport">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\QR">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\QtAlignedMalloc">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\Sparse">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\SparseCholesky">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\SparseCore">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\SparseLU">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\SparseQR">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\SPQRSupport">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\StdDeque">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\StdList">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\StdVector">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\SuperLUSupport">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\SVD">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\Eigen\UmfPackSupport">
+      <Filter>include</Filter>
+    </None>
+  </ItemGroup>
+</Project>
