@@ -115,11 +115,6 @@
   <ItemGroup>
     <Natvis Include="src\contrib\yaml-cpp.natvis" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="CONTRIBUTING.md" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

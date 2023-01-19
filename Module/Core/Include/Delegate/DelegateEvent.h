@@ -1,10 +1,10 @@
 /*
- * ��������Ʈ �̺�Ʈ���� ���縦 ���� ����ؼ� �ȵ�.
- * �̺�Ʈ���� ������ ���̵� ��� �ִµ� �̴� �ڵ鷯�� ���� ���Ÿ� ������.
- * ���� ��������Ʈ �̺�Ʈ�� ���簡 �ȴٸ� �� ��������Ʈ �ȿ� �ߺ��� ���̵� ���� ��������Ʈ �̺�Ʈ�� ���� ���� ����.
- * ���� ��������Ʈ �̺�Ʈ���� ���̵� �����ϴ� ��������Ʈ ���忡���� ġ����.
+ * 델리게이트 이벤트들의 복사를 절대 허용해선 안됨.
+ * 이벤트들은 각각의 아이디를 들고 있는데 이는 핸들러를 통한 제거를 위함임.
+ * 만약 델리게이트 이벤트가 복사가 된다면 한 델리게이트 안에 중복된 아이디를 가진 델리게이트 이벤트가 있을 수도 있음.
+ * 또한 델리게이트 이벤트들의 아이디를 관리하는 델리게이트 입장에서도 치명적.
  *
- * �̰� �����غ��ϱ� ����� ���Ƶ� �̵��� ����ؾ� �ҵ�.
+ * 이거 생각해보니까 복사는 막아도 이동은 허용해야 할듯.
  */
 
 #pragma once
@@ -14,9 +14,9 @@
 namespace joo
 {
 	/**
-	 * @brief �⺻ ��������Ʈ �̺�Ʈ Ÿ���Դϴ�.
-	 * @tparam TRet ��ȯ Ÿ��.
-	 * @tparam TParams �Է� ���� ���� Ÿ��.
+	 * @brief 기본 델리게이트 이벤트 타입입니다.
+	 * @tparam TRet 반환 타입.
+	 * @tparam TParams 입력 가변 인자 타입.
 	 */
 	template <typename TRet, typename... TParams>
 	class JDelegateEvent
@@ -29,17 +29,17 @@ namespace joo
 		}
 
 		/**
-		 * @brief ��������Ʈ �̺�Ʈ�� ȣ���մϴ�.
-		 * @warning Invocation �Ŀ� ���� ���θ� �����մϴ�.
-		 * @return Invocation�� ����� ��ȯ. Invocation�� �����ϸ� �⺻ �����ڸ� ��ȯ�մϴ�.
-		 * @warning TRet�� �⺻ �����ڰ� �ݵ�� ���ǵǾ� �־�� �մϴ�.
+		 * @brief 델리게이트 이벤트를 호출합니다.
+		 * @warning Invocation 후에 만료 여부를 갱신합니다.
+		 * @return Invocation의 결과를 반환. Invocation이 실패하면 기본 생성자를 반환합니다.
+		 * @warning TRet의 기본 생성자가 반드시 정의되어 있어야 합니다.
 		 */
 		virtual TRet Invoke(TParams ... params) = 0;
 
 		/**
-		 * @brief ��������Ʈ �̺�Ʈ�� ����Ǿ����� Ȯ���մϴ�.
-		 * @details ���� ���δ� Invocation �Ŀ� �� �� �ֽ��ϴ�.
-		 * @return ��������Ʈ �̺�Ʈ ���� ����.
+		 * @brief 델리게이트 이벤트가 만료되었는지 확인합니다.
+		 * @details 만료 여부는 Invocation 후에 알 수 있습니다.
+		 * @return 델리게이트 이벤트 만료 여부.
 		 */
 		bool IsExpired() const
 		{
@@ -47,8 +47,8 @@ namespace joo
 		}
 
 		/**
-		 * @brief ��������Ʈ�� �ο��� ��������Ʈ �̺�Ʈ ���̵� ��ȯ�մϴ�.
-		 * @return ��������Ʈ �̺�Ʈ ���̵�.
+		 * @brief 델리게이트가 부여한 델리게이트 이벤트 아이디를 반환합니다.
+		 * @return 델리게이트 이벤트 아이디.
 		 */
 		DelegateEventId GetEventId() const
 		{

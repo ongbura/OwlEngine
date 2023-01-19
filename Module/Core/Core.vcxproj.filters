@@ -62,7 +62,7 @@
     <ClInclude Include="Source\Debug\StackWalker.h">
       <Filter>Debug</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Debug\DebugHelper.h">
+    <ClInclude Include="Source\Debug\CrashHandler.h">
       <Filter>Debug</Filter>
     </ClInclude>
   </ItemGroup>
@@ -81,7 +81,7 @@
     <ClCompile Include="Source\Debug\StackWalker.cpp">
       <Filter>Debug</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Debug\DebugHelper.cpp">
+    <ClCompile Include="Source\Debug\CrashHandler.cpp">
       <Filter>Debug</Filter>
     </ClCompile>
     <ClCompile Include="Source\CoreAPI.cpp" />

@@ -238,10 +238,6 @@
     <ClCompile Include="Source\DirectXTexWIC.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HISTORY.md" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
-    <None Include="SECURITY.md" />
     <None Include="Source\Shaders\BC6HEncode.hlsl">
       <FileType>Document</FileType>
     </None>

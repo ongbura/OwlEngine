@@ -100,10 +100,6 @@
     <ClCompile Include="Source\WICTextureLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HISTORY.md" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
-    <None Include="SECURITY.md" />
     <None Include="Source\Shaders\Common.fxh" />
     <None Include="Source\Shaders\CompileShaders.cmd" />
     <None Include="Source\Shaders\Lighting.fxh" />

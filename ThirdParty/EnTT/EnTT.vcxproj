@@ -93,11 +93,6 @@
     <ClInclude Include="include\entt\signal\fwd.hpp" />
     <ClInclude Include="include\entt\signal\sigh.hpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="CONTRIBUTING.md" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

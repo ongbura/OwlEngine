@@ -1,7 +1,7 @@
 #include "CorePCH.h"
 #include "CoreAPI.h"
 
-#include "Debug/DebugHelper.h"
+#include "Debug/CrashHandler.h"
 
 void Core::InstallUnhandledExceptionFilter()
 {
@@ -13,7 +13,7 @@ void Core::InstallUnhandledExceptionFilter()
 	}
 
 	// Set unhandled exception filter function.
-	SetUnhandledExceptionFilter(DebugHelper::ExceptionFilter);
+	SetUnhandledExceptionFilter(CrashHandler::ExceptionFilter);
 
 	bInitialized = true;
 }

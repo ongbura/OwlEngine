@@ -1,42 +1,33 @@
 #include "CorePCH.h"
 #include "Misc/Paths.h"
 
-#define LOG_DIR TEXT(R"(Logs\)")
-#define ENGINE_CONTENT_DIR TEXT(R"(Content\Engine\)")
-#define USER_CONTENT_DIR TEXT(R"(Content\User\)")
-#define CONFIG_DIR TEXT(R"(Config\)")
-
-Paths::Paths(const std::filesystem::path& path)
-	: mPath(path)
+Path Paths::GetLogDir()
 {
+	return GetBinariesDir().parent_path() / TEXT("Logs");
 }
 
-std::wstring Paths::GetEngineDir()
+Path Paths::GetEngineContentDir()
 {
-	static std::wstring engineDir = ENGINE_DIR;
-	return engineDir;
+	return getContentDir() / TEXT("Logs");
 }
 
-std::wstring Paths::GetLogDir()
+Path Paths::GetUserContentDir()
 {
-	return GetEngineDir() + LOG_DIR;
+	return getContentDir() / TEXT("Logs");
 }
 
-std::wstring Paths::GetEngineContentDir()
+Path Paths::GetConfigDir()
 {
-	return GetEngineDir() + ENGINE_CONTENT_DIR;
+	return GetBinariesDir().parent_path() / TEXT("Config");
 }
 
-std::wstring Paths::GetUserContentDir()
+Path Paths::GetBinariesDir()
 {
-	return GetEngineDir() + USER_CONTENT_DIR;
+	static const Path binariesDir = std::filesystem::current_path();
+	return binariesDir;
 }
 
-std::wstring Paths::GetConfigDir()
+Path Paths::getContentDir()
 {
-	return GetEngineDir() + CONFIG_DIR;
-}
-
-std::wstring Paths::GetEngineBinariesDir()
-{
+	return GetBinariesDir().parent_path() / TEXT("Content");
 }

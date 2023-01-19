@@ -2,36 +2,33 @@
 
 #include "CoreDLL.h"
 
+using Path = std::filesystem::path;
+
 class CORE_API Paths
 {
 public:
-	Paths() = default;
-	explicit Paths(const std::filesystem::path& path);
-	Paths(const Paths&) = default;
-	Paths(Paths&&) = delete;
-	~Paths() = default;
+	Paths() = delete;
+	~Paths() = delete;
+	
+	static Path GetLogDir();
 
-	static std::wstring GetEngineDir();
+	static Path GetEngineContentDir();
 
-	static std::wstring GetLogDir();
+	static Path GetUserContentDir();
 
-	static std::wstring GetEngineContentDir();
+	static Path GetConfigDir();
 
-	static std::wstring GetUserContentDir();
-
-	static std::wstring GetConfigDir();
-
-	static std::wstring GetEngineBinariesDir();
+	static Path GetBinariesDir();
 
 	template <typename... TArgs>
-	Paths Combine(TArgs&&... args);
+	static Path Combine(TArgs&&... args);
 
 private:
-	std::filesystem::path mPath{};
+	static Path getContentDir();
 };
 
 template <typename ... TArgs>
-Paths Paths::Combine(TArgs&&... args)
+Path Paths::Combine(TArgs&&... args)
 {
 
 }

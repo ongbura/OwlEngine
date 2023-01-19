@@ -122,8 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="include\spdlog\fmt\bundled\fmt.license.rst" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\async.cpp" />

@@ -111,9 +111,5 @@
     <None Include="Source\Shaders\BC7Encode.hlsl">
       <Filter>Source\Shaders</Filter>
     </None>
-    <None Include="HISTORY.md" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
-    <None Include="SECURITY.md" />
   </ItemGroup>
 </Project>

@@ -21,12 +21,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yaml-cpp", "ThirdParty\yaml
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrashReporter", "Module\CrashReporter\CrashReporter.csproj", "{F84F6DAF-432A-4FA7-BDDA-BD415EA6D8A7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spdlog", "ThirdParty\spdlog\spdlog.vcxproj", "{526FBE17-B91B-4614-A643-F13031BABE9D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B86214AA-A50E-4B5E-979B-5E549DFC586A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{B86214AA-A50E-4B5E-979B-5E549DFC586A}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Module.props = Module.props
+		ThirdParty.props = ThirdParty.props
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spdlog", "ThirdParty\spdlog\spdlog.vcxproj", "{526FBE17-B91B-4614-A643-F13031BABE9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

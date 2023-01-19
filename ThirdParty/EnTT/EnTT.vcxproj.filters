@@ -262,9 +262,4 @@
       <Filter>Include\platform</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="CONTRIBUTING.md" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
-  </ItemGroup>
 </Project>
