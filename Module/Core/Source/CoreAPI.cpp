@@ -1,7 +1,7 @@
 #include "CorePCH.h"
 #include "CoreAPI.h"
 
-#include "Debug/CrashHandler.h"
+#include "CrashHandler/CrashHandler.h"
 
 void Core::InstallUnhandledExceptionFilter()
 {

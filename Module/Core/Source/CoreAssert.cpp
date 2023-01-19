@@ -1,7 +1,7 @@
 #include "CorePCH.h"
 #include "CoreAssert.h"
 
-#include "Debug/CrashHandler.h"
+#include "CrashHandler/CrashHandler.h"
 
 void Assertion::OnCheckFailed(const std::wstring& expr, const std::wstring& fileName, const uint32 line, const std::wstring& message)
 {

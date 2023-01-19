@@ -59,10 +59,10 @@
     </ClInclude>
     <ClInclude Include="Source\CoreDLL.h" />
     <ClInclude Include="Source\CorePCH.h" />
-    <ClInclude Include="Source\Debug\StackWalker.h">
+    <ClInclude Include="Source\CrashHandler\StackWalker.h">
       <Filter>Debug</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Debug\CrashHandler.h">
+    <ClInclude Include="Source\CrashHandler\CrashHandler.h">
       <Filter>Debug</Filter>
     </ClInclude>
   </ItemGroup>
@@ -78,10 +78,10 @@
     <ClCompile Include="Source\Logger\ScopedLogLevel.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Debug\StackWalker.cpp">
+    <ClCompile Include="Source\CrashHandler\StackWalker.cpp">
       <Filter>Debug</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Debug\CrashHandler.cpp">
+    <ClCompile Include="Source\CrashHandler\CrashHandler.cpp">
       <Filter>Debug</Filter>
     </ClCompile>
     <ClCompile Include="Source\CoreAPI.cpp" />
