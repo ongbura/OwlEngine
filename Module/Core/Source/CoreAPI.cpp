@@ -3,7 +3,7 @@
 
 #include "Debug/DebugHelper.h"
 
-void InitializeCoreApi()
+void Core::InstallUnhandledExceptionFilter()
 {
 	static bool bInitialized = false;
 
@@ -14,11 +14,6 @@ void InitializeCoreApi()
 
 	// Set unhandled exception filter function.
 	SetUnhandledExceptionFilter(DebugHelper::ExceptionFilter);
-
-	// Initialize Logger
-	Logger::Initialize();
-
-	// TODO: Initialize Config
 
 	bInitialized = true;
 }

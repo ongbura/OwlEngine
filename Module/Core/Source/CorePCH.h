@@ -7,7 +7,6 @@
 #include <Windows.h>
 #include <tchar.h>
 #include <iostream>
-#include <iomanip>
 #include <string>
 #include <sstream>
 #include <vector>
@@ -21,9 +20,7 @@
 #include <codecvt>
 #include <cassert>
 #include <algorithm>
-#include <fstream>
 #include <limits>
-
-#include "spdlog/fmt/fmt.h"
+#include <filesystem>
 
 #include "CoreTypes.h"

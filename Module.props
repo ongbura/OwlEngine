@@ -5,6 +5,7 @@
     <ModuleDir>$(SolutionDir)Module\</ModuleDir>
     <IncludeDir>$(ProjectDir)Include\</IncludeDir>
     <SourceDir>$(ProjectDir)Source\</SourceDir>
+    <ThirdPartyDir>$(SolutionDir)ThirdParty\</ThirdPartyDir>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)Binaries\$(Configuration)\</OutDir>
@@ -17,9 +18,9 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(IncludeDir);$(SourceDir);$(IncludeDir)ThirdParty\;$(SourceDir)ThirdParty\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4231;</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(IncludeDir);$(SourceDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819;4251;</DisableSpecificWarnings>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -31,6 +32,9 @@
     </BuildMacro>
     <BuildMacro Include="SourceDir">
       <Value>$(SourceDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ThirdPartyDir">
+      <Value>$(ThirdPartyDir)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

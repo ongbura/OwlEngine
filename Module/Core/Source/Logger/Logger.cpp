@@ -2,21 +2,118 @@
 #include "Logger/Logger.h"
 
 #include "Misc/Paths.h"
-
-#pragma warning( disable : 4819 26450 26451 26437 4804 26498 26800 26812 26498 26495 4806 6285 )
-
 #include "spdlog/sinks/ostream_sink.h"
-#pragma warning( default : 4819 26450 26451 26437 4804 26498 26800 26812 26498 26495 4806 6285 )
+#include "spdlog/sinks/basic_file_sink.h"
+
+#define FILE_SINK_INDEX (0)
+#define CONSOLE_SINK_INDEX (1)
+#define CALL_STACK_START ()
+
+static std::wstring gLoggingFilename(MAX_PATH, TEXT('0'));
+static constexpr std::string gClosingPattern{ "[[%Y-%m-%d %H:%M:%S.$e]][%l] %v" };
 
 void Logger::Initialize()
 {
-	std::vector<spdlog::sink_ptr> sinks;
+	gLoggingFilename = std::format(TEXT("{}OwlEngine-Running.log"), Paths::GetLogDir());
+	
+	auto fileSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(gLoggingFilename, true);
+	const auto engineLogger = std::make_shared<spdlog::logger>("EngineLogger", fileSink);
+	
+	spdlog::set_default_logger(engineLogger);
 
-	auto lazySink = std::make_shared<spdlog::sinks::ostream_sink_mt>(mLazyStream);
-	sinks.emplace_back(lazySink);
+	// set file sink pattern
+	spdlog::default_logger()->sinks()[0]->set_pattern("[%Y-%m-%d %H:%M:%S.$e][%l]%!: %v");
+}
 
-	spdlog::set_default_logger(std::make_shared<spdlog::logger>("defaultLogger", begin(sinks), end(sinks)));
-	spdlog::set_pattern("[%Y/%m/%d %T] [%l] %!(): %v");
+void Logger::Deinitialize(const bool bAborted, std::wstringstream& closingMessageStream)
+{
+	if (spdlog::default_logger()->sinks().size() > CONSOLE_SINK_INDEX)
+	{
+		DeactivateConsoleLogging();
+	}
+
+	spdlog::default_logger()->set_pattern(gClosingPattern);
+
+	if (!bAborted)
+	{
+		if (closingMessageStream.)
+		while (!closingMessageStream.eof())
+		{
+			std::wstring line;
+			line.reserve(MAX_PATH);
+			std::getline(closingMessageStream, line);
+
+			spdlog::info(line);
+		}
+
+
+		spdlog::info(TEXT("Closing log file..."));
+	}
+	else
+	{
+		bool bHeader = true;
+		constexpr std::wstring_view hexPrefix{ TEXT("0x") };
+
+		while (!closingMessageStream.eof())
+		{
+			std::wstring line;
+			line.reserve(MAX_PATH);
+			std::getline(closingMessageStream, line);
+
+			if (bHeader)
+			{
+				// call stack symbol address's prefix is "0x"
+				// if line start with "0x", we are not on the header
+				const std::wstring_view prefix(line.cbegin(), line.cbegin() + 1);
+
+				if (hexPrefix.compare(prefix) == 0)
+				{
+					spdlog::default_logger()->set_pattern("[[%Y-%m-%d %H:%M:%S.$e]][%l] [Callstack] %v");
+					bHeader = false;
+				}
+			}
+
+			spdlog::critical(line);
+		}
+
+		spdlog::default_logger()->set_pattern(gClosingPattern);
+		spdlog::critical(TEXT(""));
+		spdlog::critical(TEXT("Closing log file..."));
+	}
+	
+	spdlog::drop_all();
+	
+	assert(std::filesystem::exists(gLoggingFilename));
+
+	const auto finalLogFilename = std::format(TEXT("{}OwlEngine-{}.log"), Paths::GetLogDir(), getNowTimeString());
+
+	std::filesystem::rename(gLoggingFilename, finalLogFilename);
+}
+
+void Logger::ActivateConsoleLogging()
+{
+	// TODO: implementation
+}
+
+void Logger::DeactivateConsoleLogging()
+{
+	// TODO: implementation
+}
+
+void Logger::SetFileLogPattern(const std::string& pattern)
+{
+	spdlog::default_logger()->sinks()[FILE_SINK_INDEX]->set_pattern(pattern);
+}
+
+void Logger::SetConsoleLogPattern(const std::string& pattern)
+{
+	// console sink is not
+	if (spdlog::default_logger()->sinks().size() == 1)
+	{
+		return;
+	}
+
+	// TODO: implementation
 }
 
 void Logger::SetLevel(const ELogLevel level)
@@ -29,28 +126,7 @@ ELogLevel Logger::GetLevel()
 	return static_cast<ELogLevel>(spdlog::get_level());
 }
 
-std::wstring Logger::WriteFile(const std::string additionalMessage)
-{
-	std::wstring fileName = Paths::GetLogDir();
-	fileName += TEXT("OwlEngine-");
-	fileName += getCurrentTime();
-	fileName += TEXT(".log");
-	
-	std::ofstream fOut;
-	fOut.open(fileName, std::ios_base::out | std::ios_base::binary);
-
-	if (fOut.is_open())
-	{
-		fOut << mLazyStream.str();
-		fOut << additionalMessage;
-
-		fOut.close();
-	}
-
-	return fileName;
-}
-
-std::wstring Logger::getCurrentTime()
+std::wstring Logger::getNowTimeString()
 {
 	const auto timer = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 

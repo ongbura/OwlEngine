@@ -6,6 +6,11 @@
 #define USER_CONTENT_DIR TEXT(R"(Content\User\)")
 #define CONFIG_DIR TEXT(R"(Config\)")
 
+Paths::Paths(const std::filesystem::path& path)
+	: mPath(path)
+{
+}
+
 std::wstring Paths::GetEngineDir()
 {
 	static std::wstring engineDir = ENGINE_DIR;
@@ -30,4 +35,8 @@ std::wstring Paths::GetUserContentDir()
 std::wstring Paths::GetConfigDir()
 {
 	return GetEngineDir() + CONFIG_DIR;
+}
+
+std::wstring Paths::GetEngineBinariesDir()
+{
 }

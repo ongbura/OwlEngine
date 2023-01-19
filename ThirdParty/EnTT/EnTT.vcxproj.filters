@@ -42,223 +42,223 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\entt\entt.hpp">
+    <ClInclude Include="include\entt\entt.hpp">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\fwd.hpp">
+    <ClInclude Include="include\entt\fwd.hpp">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\config\config.h">
+    <ClInclude Include="include\entt\config\config.h">
       <Filter>Include\config</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\config\macro.h">
+    <ClInclude Include="include\entt\config\macro.h">
       <Filter>Include\config</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\config\version.h">
+    <ClInclude Include="include\entt\config\version.h">
       <Filter>Include\config</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\container\dense_map.hpp">
+    <ClInclude Include="include\entt\container\dense_map.hpp">
       <Filter>Include\container</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\container\dense_set.hpp">
+    <ClInclude Include="include\entt\container\dense_set.hpp">
       <Filter>Include\container</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\container\fwd.hpp">
+    <ClInclude Include="include\entt\container\fwd.hpp">
       <Filter>Include\container</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\algorithm.hpp">
+    <ClInclude Include="include\entt\core\algorithm.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\any.hpp">
+    <ClInclude Include="include\entt\core\any.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\attribute.h">
+    <ClInclude Include="include\entt\core\attribute.h">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\compressed_pair.hpp">
+    <ClInclude Include="include\entt\core\compressed_pair.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\enum.hpp">
+    <ClInclude Include="include\entt\core\enum.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\family.hpp">
+    <ClInclude Include="include\entt\core\family.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\fwd.hpp">
+    <ClInclude Include="include\entt\core\fwd.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\hashed_string.hpp">
+    <ClInclude Include="include\entt\core\hashed_string.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\ident.hpp">
+    <ClInclude Include="include\entt\core\ident.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\iterator.hpp">
+    <ClInclude Include="include\entt\core\iterator.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\memory.hpp">
+    <ClInclude Include="include\entt\core\memory.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\monostate.hpp">
+    <ClInclude Include="include\entt\core\monostate.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\tuple.hpp">
+    <ClInclude Include="include\entt\core\tuple.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\type_info.hpp">
+    <ClInclude Include="include\entt\core\type_info.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\type_traits.hpp">
+    <ClInclude Include="include\entt\core\type_traits.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\core\utility.hpp">
+    <ClInclude Include="include\entt\core\utility.hpp">
       <Filter>Include\core</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\component.hpp">
+    <ClInclude Include="include\entt\entity\component.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\entity.hpp">
+    <ClInclude Include="include\entt\entity\entity.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\fwd.hpp">
+    <ClInclude Include="include\entt\entity\fwd.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\group.hpp">
+    <ClInclude Include="include\entt\entity\group.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\handle.hpp">
+    <ClInclude Include="include\entt\entity\handle.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\helper.hpp">
+    <ClInclude Include="include\entt\entity\helper.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\observer.hpp">
+    <ClInclude Include="include\entt\entity\observer.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\organizer.hpp">
+    <ClInclude Include="include\entt\entity\organizer.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\registry.hpp">
+    <ClInclude Include="include\entt\entity\registry.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\runtime_view.hpp">
+    <ClInclude Include="include\entt\entity\runtime_view.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\snapshot.hpp">
+    <ClInclude Include="include\entt\entity\snapshot.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\sparse_set.hpp">
+    <ClInclude Include="include\entt\entity\sparse_set.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\storage.hpp">
+    <ClInclude Include="include\entt\entity\storage.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\storage_mixin.hpp">
+    <ClInclude Include="include\entt\entity\storage_mixin.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\entity\view.hpp">
+    <ClInclude Include="include\entt\entity\view.hpp">
       <Filter>Include\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\graph\adjacency_matrix.hpp">
+    <ClInclude Include="include\entt\graph\adjacency_matrix.hpp">
       <Filter>Include\graph</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\graph\dot.hpp">
+    <ClInclude Include="include\entt\graph\dot.hpp">
       <Filter>Include\graph</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\graph\flow.hpp">
+    <ClInclude Include="include\entt\graph\flow.hpp">
       <Filter>Include\graph</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\graph\fwd.hpp">
+    <ClInclude Include="include\entt\graph\fwd.hpp">
       <Filter>Include\graph</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\locator\locator.hpp">
+    <ClInclude Include="include\entt\locator\locator.hpp">
       <Filter>Include\locator</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\adl_pointer.hpp">
+    <ClInclude Include="include\entt\meta\adl_pointer.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\container.hpp">
+    <ClInclude Include="include\entt\meta\container.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\context.hpp">
+    <ClInclude Include="include\entt\meta\context.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\factory.hpp">
+    <ClInclude Include="include\entt\meta\factory.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\fwd.hpp">
+    <ClInclude Include="include\entt\meta\fwd.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\meta.hpp">
+    <ClInclude Include="include\entt\meta\meta.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\node.hpp">
+    <ClInclude Include="include\entt\meta\node.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\pointer.hpp">
+    <ClInclude Include="include\entt\meta\pointer.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\policy.hpp">
+    <ClInclude Include="include\entt\meta\policy.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\range.hpp">
+    <ClInclude Include="include\entt\meta\range.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\resolve.hpp">
+    <ClInclude Include="include\entt\meta\resolve.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\template.hpp">
+    <ClInclude Include="include\entt\meta\template.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\type_traits.hpp">
+    <ClInclude Include="include\entt\meta\type_traits.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\meta\utility.hpp">
+    <ClInclude Include="include\entt\meta\utility.hpp">
       <Filter>Include\meta</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\signal\delegate.hpp">
+    <ClInclude Include="include\entt\signal\delegate.hpp">
       <Filter>Include\signal</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\signal\dispatcher.hpp">
+    <ClInclude Include="include\entt\signal\dispatcher.hpp">
       <Filter>Include\signal</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\signal\emitter.hpp">
+    <ClInclude Include="include\entt\signal\emitter.hpp">
       <Filter>Include\signal</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\signal\fwd.hpp">
+    <ClInclude Include="include\entt\signal\fwd.hpp">
       <Filter>Include\signal</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\signal\sigh.hpp">
+    <ClInclude Include="include\entt\signal\sigh.hpp">
       <Filter>Include\signal</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\resource\cache.hpp">
+    <ClInclude Include="include\entt\resource\cache.hpp">
       <Filter>Include\resource</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\resource\fwd.hpp">
+    <ClInclude Include="include\entt\resource\fwd.hpp">
       <Filter>Include\resource</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\resource\loader.hpp">
+    <ClInclude Include="include\entt\resource\loader.hpp">
       <Filter>Include\resource</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\resource\resource.hpp">
+    <ClInclude Include="include\entt\resource\resource.hpp">
       <Filter>Include\resource</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\process\fwd.hpp">
+    <ClInclude Include="include\entt\process\fwd.hpp">
       <Filter>Include\process</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\process\process.hpp">
+    <ClInclude Include="include\entt\process\process.hpp">
       <Filter>Include\process</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\process\scheduler.hpp">
+    <ClInclude Include="include\entt\process\scheduler.hpp">
       <Filter>Include\process</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\poly\fwd.hpp">
+    <ClInclude Include="include\entt\poly\fwd.hpp">
       <Filter>Include\poly</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\poly\poly.hpp">
+    <ClInclude Include="include\entt\poly\poly.hpp">
       <Filter>Include\poly</Filter>
     </ClInclude>
-    <ClInclude Include="Include\entt\platform\android-ndk-r17.hpp">
+    <ClInclude Include="include\entt\platform\android-ndk-r17.hpp">
       <Filter>Include\platform</Filter>
     </ClInclude>
   </ItemGroup>

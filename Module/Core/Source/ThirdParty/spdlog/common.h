@@ -42,16 +42,13 @@
 #    define SPDLOG_INLINE inline
 #endif // #ifdef SPDLOG_COMPILED_LIB
 
-#include <fmt/core.h>
-#include <fmt/format.h>
-//
-// #include <fmt/fmt.h>
+#include <spdlog/fmt/fmt.h>
 
 #if !defined(SPDLOG_USE_STD_FORMAT) && FMT_VERSION >= 80000 // backward compatibility with fmt versions older than 8
 #    define SPDLOG_FMT_RUNTIME(format_string) fmt::runtime(format_string)
 #    define SPDLOG_FMT_STRING(format_string) FMT_STRING(format_string)
 #    if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT)
-#        include <fmt/xchar.h>
+#        include <spdlog/fmt/xchar.h>
 #    endif
 #else
 #    define SPDLOG_FMT_RUNTIME(format_string) format_string

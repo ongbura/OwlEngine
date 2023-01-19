@@ -5,8 +5,7 @@
 #include <chrono>
 #include <type_traits>
 #include <iterator>
-#include <fmt/core.h>
-#include <fmt/format.h>
+#include <spdlog/fmt/fmt.h>
 #include <spdlog/common.h>
 
 #ifdef SPDLOG_USE_STD_FORMAT

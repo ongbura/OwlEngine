@@ -1,10 +1,7 @@
 #pragma once
 
 #include "CoreDLL.h"
-
-#pragma warning( disable : 4819 26450 26451 26437 4804 26498 26800 26812 26498 26495 4806 6285 )
 #include "spdlog/spdlog.h"
-#pragma warning( default : 4819 26450 26451 26437 4804 26498 26800 26812 26498 26495 4806 6285 )
 
 enum class ELogLevel : uint8
 {
@@ -21,11 +18,19 @@ class CORE_API Logger final
 public:
 	static void Initialize();
 
+    static void Deinitialize(bool bAborted, std::wstringstream& closingMessageStream);
+
+    static void ActivateConsoleLogging();
+
+    static void DeactivateConsoleLogging();
+
+    static void SetFileLogPattern(const std::string& pattern);
+
+    static void SetConsoleLogPattern(const std::string& pattern);
+
     static void SetLevel(ELogLevel level);
 
     static ELogLevel GetLevel();
-
-    static std::wstring WriteFile(std::string additionalMessage);
 
     template <typename... TArgs>
     static void Trace(spdlog::format_string_t<TArgs...> fmt, TArgs&&... args);
@@ -46,9 +51,7 @@ public:
     static void Fatal(spdlog::format_string_t<TArgs...> fmt, TArgs&&... args);
 
 private:
-	static std::wstring getCurrentTime();
-
-	inline static std::stringstream mLazyStream{};
+	static std::wstring getNowTimeString();
 };
 
 template <typename ... TArgs>

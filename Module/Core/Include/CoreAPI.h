@@ -11,4 +11,7 @@
 
 using namespace joo;
 
-void CORE_API InitializeCoreApi();
+namespace Core
+{
+	void CORE_API InstallUnhandledExceptionFilter();
+}

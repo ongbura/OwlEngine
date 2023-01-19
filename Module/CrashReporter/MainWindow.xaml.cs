@@ -33,6 +33,7 @@ namespace CrashReporter
             CallStack = args[2];
 
             this.DataContext = this;
+            Loaded += OnLoaded;
         }
 
         private void Hyperlink_GitHubRepo(object sender, RequestNavigateEventArgs e)
@@ -40,6 +41,12 @@ namespace CrashReporter
             System.Diagnostics.Process.Start("explorer.exe", e.Uri.AbsoluteUri);
             e.Handled = true;
         }
+
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            new System.Media.SoundPlayer("C:\\WINDOWS\\Media\\Windows Critical Stop.wav").Play();
+        }
+
         public string LogPath { get; set; }
         public string CallStack { get; set; }
     }
