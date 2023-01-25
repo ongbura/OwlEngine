@@ -12,9 +12,10 @@ LONG CrashHandler::ExceptionFilter(EXCEPTION_POINTERS* exceptionPointers)
 	SetErrorMode(SEM_NOGPFAULTERRORBOX);
 
 	const auto exceptionCode = exceptionPointers->ExceptionRecord->ExceptionCode;
+	const auto codeString = std::format(TEXT("Unhandled Exception: {}"), exceptionCodeToString(exceptionCode));
 
 	std::vector<std::wstring> details;
-	details.emplace_back(std::format(TEXT("Unhandled Exception: {}", exceptionCodeToString())));
+	details.emplace_back(codeString);
 	details.emplace_back(TEXT("MSDN Exception Code List: https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-exception_record"));
 
 	HandleCrash(details);
@@ -94,7 +95,7 @@ void CrashHandler::forceTerminate()
 
 void CrashHandler::executeCrashReporter(const Path& logFilePath, const std::wstring& debugMessage,	const Path& enginePath)
 {
-	const auto arguments = std::format(TEXT("{} {} {}"), logFilePath, debugMessage, enginePath);
+	const auto arguments = std::format(TEXT("{} {} {}"), logFilePath.wstring(), debugMessage, enginePath.wstring());
 	const auto crashReporterPath = Paths::GetBinariesDir() / TEXT("CrashReporter.exe");
 
 	ShellExecute(nullptr, TEXT("open"), crashReporterPath.c_str(), arguments.c_str(), nullptr, SW_HIDE);

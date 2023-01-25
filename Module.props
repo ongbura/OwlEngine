@@ -6,10 +6,14 @@
     <IncludeDir>$(ProjectDir)Include\</IncludeDir>
     <SourceDir>$(ProjectDir)Source\</SourceDir>
     <ThirdPartyDir>$(SolutionDir)ThirdParty\</ThirdPartyDir>
+    <SharedPchDir>$(SolutionDir)Intermediate\Shared\</SharedPchDir>
+    <SharedPch>$(SharedPchDir)Shared.pch</SharedPch>
+    <SharedPdb>$(SharedPchDir)vc$(PlatformToolsetVersion).pdb</SharedPdb>
+    <SharedIdb>$(SharedPchDir)vc$(PlatformToolsetVersion).idb</SharedIdb>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)Binaries\</OutDir>
-    <IntDir>$(SolutionDir)Intermediate\</IntDir>
+    <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\</IntDir>
     <TargetName>OwlEngine-$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
@@ -37,6 +41,18 @@
     </BuildMacro>
     <BuildMacro Include="ThirdPartyDir">
       <Value>$(ThirdPartyDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SharedPchDir">
+      <Value>$(SharedPchDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SharedPch">
+      <Value>$(SharedPch)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SharedPdb">
+      <Value>$(SharedPdb)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SharedIdb">
+      <Value>$(SharedIdb)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

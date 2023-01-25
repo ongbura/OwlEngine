@@ -4,9 +4,6 @@
     <Filter Include="Resource">
       <UniqueIdentifier>{ba1c0e9f-fcf5-4d9e-89e3-fb4ecf4a62af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source">
-      <UniqueIdentifier>{ee8812f9-8c8c-4838-84b9-07cf01d14547}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\small.ico">
@@ -25,5 +22,11 @@
     <ClInclude Include="Resource\resource.h">
       <Filter>Resource</Filter>
     </ClInclude>
+    <ClInclude Include="Include\App.h" />
+    <ClInclude Include="Source\EnginePCH.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\App.cpp" />
+    <ClCompile Include="Source\EnginePCH.cpp" />
   </ItemGroup>
 </Project>

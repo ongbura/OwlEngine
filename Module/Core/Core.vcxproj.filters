@@ -13,7 +13,7 @@
     <Filter Include="Delegate">
       <UniqueIdentifier>{5ef324f3-d621-44f6-a47e-73859278e10f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Debug">
+    <Filter Include="CrashHandler">
       <UniqueIdentifier>{039891ae-9155-45e0-8700-b706ff44db9e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -60,10 +60,10 @@
     <ClInclude Include="Source\CoreDLL.h" />
     <ClInclude Include="Source\CorePCH.h" />
     <ClInclude Include="Source\CrashHandler\StackWalker.h">
-      <Filter>Debug</Filter>
+      <Filter>CrashHandler</Filter>
     </ClInclude>
     <ClInclude Include="Source\CrashHandler\CrashHandler.h">
-      <Filter>Debug</Filter>
+      <Filter>CrashHandler</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -79,10 +79,10 @@
       <Filter>Logger</Filter>
     </ClCompile>
     <ClCompile Include="Source\CrashHandler\StackWalker.cpp">
-      <Filter>Debug</Filter>
+      <Filter>CrashHandler</Filter>
     </ClCompile>
     <ClCompile Include="Source\CrashHandler\CrashHandler.cpp">
-      <Filter>Debug</Filter>
+      <Filter>CrashHandler</Filter>
     </ClCompile>
     <ClCompile Include="Source\CoreAPI.cpp" />
   </ItemGroup>
