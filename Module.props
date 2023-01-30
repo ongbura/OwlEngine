@@ -6,10 +6,7 @@
     <IncludeDir>$(ProjectDir)Include\</IncludeDir>
     <SourceDir>$(ProjectDir)Source\</SourceDir>
     <ThirdPartyDir>$(SolutionDir)ThirdParty\</ThirdPartyDir>
-    <SharedPchDir>$(SolutionDir)Intermediate\Shared\</SharedPchDir>
-    <SharedPch>$(SharedPchDir)Shared.pch</SharedPch>
-    <SharedPdb>$(SharedPchDir)vc$(PlatformToolsetVersion).pdb</SharedPdb>
-    <SharedIdb>$(SharedPchDir)vc$(PlatformToolsetVersion).idb</SharedIdb>
+    <CoreDir>$(ModuleDir)Core\Include\</CoreDir>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)Binaries\</OutDir>
@@ -24,10 +21,15 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(IncludeDir);$(SourceDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4819;4251;</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ThirdPartyDir)spdlog\include\;$(CoreDir);$(IncludeDir);$(SourceDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>26812</DisableSpecificWarnings>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);$(ThirdPartyDir)spdlog\Binary\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>spdlog.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <BuildMacro Include="ModuleDir">
@@ -42,17 +44,8 @@
     <BuildMacro Include="ThirdPartyDir">
       <Value>$(ThirdPartyDir)</Value>
     </BuildMacro>
-    <BuildMacro Include="SharedPchDir">
-      <Value>$(SharedPchDir)</Value>
-    </BuildMacro>
-    <BuildMacro Include="SharedPch">
-      <Value>$(SharedPch)</Value>
-    </BuildMacro>
-    <BuildMacro Include="SharedPdb">
-      <Value>$(SharedPdb)</Value>
-    </BuildMacro>
-    <BuildMacro Include="SharedIdb">
-      <Value>$(SharedIdb)</Value>
+    <BuildMacro Include="CoreDir">
+      <Value>$(CoreDir)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

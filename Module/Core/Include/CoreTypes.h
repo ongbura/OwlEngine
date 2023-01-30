@@ -9,9 +9,20 @@ using uint16 = unsigned __int16;
 using uint32 = unsigned __int32;
 using uint64 = unsigned __int64;
 
-struct NonCopyable
-{
-	NonCopyable() = default;
-	NonCopyable(const NonCopyable&) = delete;
-	NonCopyable& operator=(const NonCopyable&) = delete;
-};
+/**
+* Makes a type non-copyable and non-movable by deleting copy/move constructors and assignment/move operators.
+* The macro should be placed in the public section of the type for better compiler diagnostic messages.
+* Example usage:
+*
+*	class FMyClassName
+*	{
+*	public:
+*		NON_COPYABLE(FMyClassName)
+*		FMyClassName() = default;
+*	};
+*/
+#define NON_COPYABLE(TypeName) \
+	TypeName(TypeName&&) = delete; \
+	TypeName(const TypeName&) = delete; \
+	TypeName& operator=(const TypeName&) = delete; \
+	TypeName& operator=(TypeName&&) = delete;

@@ -16,12 +16,18 @@
     <Filter Include="CrashHandler">
       <UniqueIdentifier>{039891ae-9155-45e0-8700-b706ff44db9e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{a8947836-2ce9-48c9-8bb0-63d286d75b78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{c60add96-78e4-4b4d-8262-660b324cab8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\CoreAPI.h" />
-    <ClInclude Include="Include\CoreAssert.h" />
+    <ClInclude Include="Include\CoreAssertion.h" />
     <ClInclude Include="Include\CoreTypes.h" />
-    <ClInclude Include="Include\Misc\Paths.h">
+    <ClInclude Include="Include\Misc\EnginePaths.h">
       <Filter>Misc</Filter>
     </ClInclude>
     <ClInclude Include="Include\Logger\Logger.h">
@@ -57,19 +63,45 @@
     <ClInclude Include="Include\Delegate\UniCastDelegate.h">
       <Filter>Delegate</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CoreDLL.h" />
+    <ClInclude Include="Include\CoreDLL.h" />
     <ClInclude Include="Source\CorePCH.h" />
     <ClInclude Include="Source\CrashHandler\StackWalker.h">
       <Filter>CrashHandler</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CrashHandler\CrashHandler.h">
+    <ClInclude Include="Include\CrashHandler\CrashHandler.h">
       <Filter>CrashHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Misc\SystemInfo.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Platform\Windows\PowerShell.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Misc\Utils.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Misc\Memory.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Platform\Windows\ProcessPipe.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Platform\Windows\WindowsEvent.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Platform\Windows\ProcessSendingPipe.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Platform\Windows\ProcessReceivingPipe.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Platform\Windows\NativeWindow.h">
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\CoreAssert.cpp" />
     <ClCompile Include="Source\CorePCH.cpp" />
-    <ClCompile Include="Source\Misc\Paths.cpp">
+    <ClCompile Include="Source\Misc\EnginePaths.cpp">
       <Filter>Misc</Filter>
     </ClCompile>
     <ClCompile Include="Source\Logger\Logger.cpp">
@@ -84,6 +116,29 @@
     <ClCompile Include="Source\CrashHandler\CrashHandler.cpp">
       <Filter>CrashHandler</Filter>
     </ClCompile>
-    <ClCompile Include="Source\CoreAPI.cpp" />
+    <ClCompile Include="Source\Misc\SystemInfo.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\PowerShell.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Misc\Utils.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\ProcessPipe.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\WindowsEvent.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\ProcessSendingPipe.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\ProcessReceivingPipe.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\NativeWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

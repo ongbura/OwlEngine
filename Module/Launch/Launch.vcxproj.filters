@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Media">
+      <UniqueIdentifier>{f60d077c-3e52-4e4d-9479-a04f0d03b270}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Media\Resource.h">
+      <Filter>Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LaunchPCH.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\EntryPoint.cpp" />
+    <ClCompile Include="Source\LaunchPCH.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Media\small.ico">
+      <Filter>Media</Filter>
+    </Image>
+    <Image Include="Media\Large.ico">
+      <Filter>Media</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Media\Launch.rc">
+      <Filter>Media</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

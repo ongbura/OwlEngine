@@ -1,4 +1,6 @@
 #include "CorePCH.h"
+#include <format>
+
 #include "StackWalker.h"
 
 #include <DbgHelp.h>

@@ -5,16 +5,16 @@ class App
 public:
 	static HRESULT Run(HINSTANCE hInstance, int nCmdShow);
 
-	static HINSTANCE GetInstanceHandle() { return sInstanceHandle; }
+	static HINSTANCE GetInstanceHandle() { return mInstanceHandle; }
 
 private:
 	static HRESULT initializeApplication(HINSTANCE hInstance, int nCmdShow);
 
 	static void terminateApplication();
 
-	inline static bool sbShouldStop = false;
+	inline static bool mbShouldStop = false;
 
-	inline static HINSTANCE sInstanceHandle = nullptr;
+	inline static HINSTANCE mInstanceHandle = nullptr;
 
 public:
 	static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);

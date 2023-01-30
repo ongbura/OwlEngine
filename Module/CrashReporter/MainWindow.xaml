@@ -50,11 +50,11 @@
                      Background="#E51C1D1F" 
                      Height="210"
                      FontSize="14"
-                     Foreground="#FFF27CEA"
+                     Foreground="White"
                      IsReadOnly="True"
                      TextWrapping="Wrap"
                      VerticalScrollBarVisibility="Auto"
-                     AcceptsReturn="True" FontWeight="Bold" Cursor="Arrow" ForceCursor="True"
+                     AcceptsReturn="True" Cursor="Arrow" ForceCursor="True"
                      Text="{Binding Path=(local:MainWindow.CallStack)}">
                 <TextBox.Style>
                     <Style TargetType="TextBox">

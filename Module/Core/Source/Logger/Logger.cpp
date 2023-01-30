@@ -1,7 +1,7 @@
 #include "CorePCH.h"
 #include "Logger/Logger.h"
 
-#include "Misc/Paths.h"
+#include "Misc/EnginePaths.h"
 #include "spdlog/sinks/ostream_sink.h"
 #include "spdlog/sinks/basic_file_sink.h"
 
@@ -9,7 +9,7 @@
 #define CONSOLE_SINK_INDEX (1)
 #define CALL_STACK_START ()
 
-static Path gLoggingFilePath{};
+static std::filesystem::path gLoggingFilePath{};
 static std::wstring gStreamLine{};
 static const std::string gPatternWithSymbol{ "[%Y-%m-%d %H:%M:%S.$e][%l]%!: %v" };
 static const std::string gPatternWithoutSymbol{ "[[%Y-%m-%d %H:%M:%S.$e]][%l] %v" };
@@ -18,7 +18,7 @@ void Logger::Initialize()
 {
 	assert(!mbInitialized);
 	
-	gLoggingFilePath = Paths::GetLogDir() / TEXT("OwlEngine-Running.log");
+	gLoggingFilePath = EnginePaths::GetLogDir() / TEXT("OwlEngine-Running.log");
 
 	auto fileSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(gLoggingFilePath, true);
 	const auto engineLogger = std::make_shared<spdlog::logger>("EngineLogger", fileSink);
@@ -26,14 +26,14 @@ void Logger::Initialize()
 	spdlog::set_default_logger(engineLogger);
 
 	// set file sink pattern
-	SetFilePattern(gPatternWithSymbol.c_str());
+	SetFileLogPattern(gPatternWithSymbol.c_str());
 
 	gStreamLine.reserve(MAX_LOG_LENGTH);
 
 	mbInitialized = true;
 }
 
-Path Logger::Deinitialize(const bool bAborted)
+std::filesystem::path Logger::Deinitialize(const bool bAborted)
 {
 	assert(mbInitialized);
 
@@ -51,9 +51,9 @@ Path Logger::Deinitialize(const bool bAborted)
 	
 	assert(std::filesystem::exists(gLoggingFilePath));
 
-	// const auto finalLogFilename = std::format(TEXT("{}OwlEngine-{}.log"), Paths::GetLogDir(), getNowTimeString());
+	// const auto finalLogFilename = std::format(TEXT("{}OwlEngine-{}.log"), EnginePaths::GetLogDir(), getNowTimeString());
 	const auto finalLogFilename = std::format(TEXT("OwlEngine-{}.log"), getNowTimeString());
-	const auto finalLogFilePath = Paths::GetLogDir() / finalLogFilename;
+	const auto finalLogFilePath = EnginePaths::GetLogDir() / finalLogFilename;
 
 	std::filesystem::rename(gLoggingFilePath, finalLogFilePath);
 
@@ -71,13 +71,13 @@ void Logger::DeactivateConsoleLogging()
 	// TODO: implementation
 }
 
-void Logger::SetFilePattern(const char* pattern)
+void Logger::SetFileLogPattern(const char* pattern)
 {
 	assert(spdlog::default_logger()->sinks().size() == 1);
 	spdlog::default_logger()->sinks()[FILE_SINK_INDEX]->set_pattern(pattern);
 }
 
-void Logger::SetConsolePattern(const char* pattern)
+void Logger::SetConsoleLogPattern(const char* pattern)
 {
 	// console sink is not
 	if (spdlog::default_logger()->sinks().size() == 1)

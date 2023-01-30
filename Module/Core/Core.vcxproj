@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\CrashHandler\CrashHandler.h" />
+    <ClInclude Include="Include\CrashHandler\CrashHandler.h" />
     <ClInclude Include="Include\CoreAPI.h" />
-    <ClInclude Include="Include\CoreAssert.h" />
+    <ClInclude Include="Include\CoreAssertion.h" />
     <ClInclude Include="Include\CoreTypes.h" />
     <ClInclude Include="Include\Delegate\DelegateBase.h" />
     <ClInclude Include="Include\Delegate\DelegateEvent.h" />
@@ -34,15 +34,27 @@
     <ClInclude Include="Include\Delegate\UniCastDelegate.h" />
     <ClInclude Include="Include\Logger\Logger.h" />
     <ClInclude Include="Include\Logger\ScopedLogLevel.h" />
-    <ClInclude Include="Include\Misc\Paths.h" />
-    <ClInclude Include="Source\CoreDLL.h" />
+    <ClInclude Include="Include\Misc\EnginePaths.h" />
+    <ClInclude Include="Include\CoreDLL.h" />
+    <ClInclude Include="Include\Misc\Memory.h" />
+    <ClInclude Include="Include\Platform\Windows\PowerShell.h" />
+    <ClInclude Include="Include\Platform\Windows\ProcessPipe.h" />
+    <ClInclude Include="Include\Platform\Windows\ProcessReceivingPipe.h" />
+    <ClInclude Include="Include\Platform\Windows\ProcessSendingPipe.h" />
+    <ClInclude Include="Include\Platform\Windows\NativeWindow.h" />
     <ClInclude Include="Source\CorePCH.h" />
     <ClInclude Include="Source\CrashHandler\StackWalker.h" />
+    <ClInclude Include="Include\Misc\SystemInfo.h" />
+    <ClInclude Include="Include\Misc\Utils.h" />
+    <ClInclude Include="Include\Platform\Windows\WindowsEvent.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\CoreAPI.cpp" />
+    <ClCompile Include="Source\Platform\Windows\NativeWindow.cpp" />
+    <ClCompile Include="Source\Platform\Windows\ProcessReceivingPipe.cpp" />
+    <ClCompile Include="Source\Platform\Windows\ProcessSendingPipe.cpp" />
+    <ClCompile Include="Source\Platform\Windows\ProcessPipe.cpp" />
+    <ClCompile Include="Source\Platform\Windows\PowerShell.cpp" />
     <ClCompile Include="Source\CrashHandler\CrashHandler.cpp" />
-    <ClCompile Include="Source\CoreAssert.cpp" />
     <ClCompile Include="Source\CorePCH.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -52,7 +64,10 @@
     <ClCompile Include="Source\CrashHandler\StackWalker.cpp" />
     <ClCompile Include="Source\Logger\Logger.cpp" />
     <ClCompile Include="Source\Logger\ScopedLogLevel.cpp" />
-    <ClCompile Include="Source\Misc\Paths.cpp" />
+    <ClCompile Include="Source\Misc\EnginePaths.cpp" />
+    <ClCompile Include="Source\Misc\SystemInfo.cpp" />
+    <ClCompile Include="Source\Misc\Utils.cpp" />
+    <ClCompile Include="Source\Platform\Windows\WindowsEvent.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -126,18 +141,18 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;BIN_DIR=LR"($(OutDir))";ENGINE_DIR=LR"($(SolutionDir))";SOLUTION_DIR=LR"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ThirdPartyDir)yaml-cpp\Include\;$(ThirdPartyDir)spdlog\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ThirdPartyDir)yaml-cpp\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(ThirdPartyDir)spdlog\Binary\;$(ThirdPartyDir)yaml-cpp\Binary\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ThirdPartyDir)yaml-cpp\Binary\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -147,7 +162,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;BIN_DIR=LR"($(OutDir))";ENGINE_DIR=LR"($(OutDir))";SOLUTION_DIR=LR"()";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>
@@ -168,18 +183,18 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;BIN_DIR=LR"($(OutDir))";ENGINE_DIR=LR"($(SolutionDir))";SOLUTION_DIR=LR"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ThirdPartyDir)yaml-cpp\Include\;$(ThirdPartyDir)spdlog\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ThirdPartyDir)yaml-cpp\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(ThirdPartyDir)spdlog\Binary\;$(ThirdPartyDir)yaml-cpp\Binary\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ThirdPartyDir)yaml-cpp\Binary\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -189,7 +204,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>CORE_EXPORT;BIN_DIR=LR"($(OutDir))";ENGINE_DIR=LR"($(OutDir))";SOLUTION_DIR=LR"()";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CORE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>CorePCH.h</PrecompiledHeaderFile>

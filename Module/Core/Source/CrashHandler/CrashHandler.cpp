@@ -1,10 +1,25 @@
 #include "CorePCH.h"
-#include "CrashHandler.h"
+#include "CrashHandler/CrashHandler.h"
 
 #include <shellapi.h>
 
 #include "StackWalker.h"
 #include "Logger/Logger.h"
+
+void CrashHandler::Initialize()
+{
+	static bool bInitialized = false;
+
+	if (bInitialized)
+	{
+		return;
+	}
+
+	// Set unhandled exception filter function.
+	SetUnhandledExceptionFilter(ExceptionFilter);
+
+	bInitialized = true;
+}
 
 LONG CrashHandler::ExceptionFilter(EXCEPTION_POINTERS* exceptionPointers)
 {
@@ -16,7 +31,8 @@ LONG CrashHandler::ExceptionFilter(EXCEPTION_POINTERS* exceptionPointers)
 
 	std::vector<std::wstring> details;
 	details.emplace_back(codeString);
-	details.emplace_back(TEXT("MSDN Exception Code List: https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-exception_record"));
+	details.emplace_back(TEXT(
+		"MSDN Exception Code List: https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-exception_record"));
 
 	HandleCrash(details);
 
@@ -25,12 +41,12 @@ LONG CrashHandler::ExceptionFilter(EXCEPTION_POINTERS* exceptionPointers)
 	 * The process is being debugged, so the exception should be passed (as second chance) to the application's debugger.
 	 */
 
-	 /*
-	  * EXCEPTION_EXECUTE_HANDLER 0x1
-	  * If the SEM_NOGPFAULTERRORBOX flag was specified in a previous call to SetErrorMode,
-	  * no Application Error message box is displayed.
-	  * The function returns control to the exception handler, which is free to take any appropriate action.
-	  */
+	/*
+	 * EXCEPTION_EXECUTE_HANDLER 0x1
+	 * If the SEM_NOGPFAULTERRORBOX flag was specified in a previous call to SetErrorMode,
+	 * no Application Error message box is displayed.
+	 * The function returns control to the exception handler, which is free to take any appropriate action.
+	 */
 	return EXCEPTION_EXECUTE_HANDLER;
 }
 
@@ -52,12 +68,12 @@ void CrashHandler::logDebugMessage(const std::vector<std::wstring>& details)
 
 	mDebugMessageHeader << TEXT('\n');
 
-	Logger::SetFilePattern("[[%Y-%m-%d %H:%M:%S.$e]][%l] %v");
+	Logger::SetFileLogPattern("[[%Y-%m-%d %H:%M:%S.$e]][%l] %v");
 	Logger::Log(ELogLevel::Error, mDebugMessageHeader);
 
 	StackWalker::Walk(mDebugMessageBody);
 
-	Logger::SetFilePattern("[[%Y-%m-%d %H:%M:%S.$e]][%l] [Callstack] %v");
+	Logger::SetFileLogPattern("[[%Y-%m-%d %H:%M:%S.$e]][%l] [Callstack] %v");
 	Logger::Log(ELogLevel::Error, mDebugMessageBody);
 }
 
@@ -85,18 +101,20 @@ void CrashHandler::forceTerminate()
 			} while (ch != TEXT('\n'));
 		}
 		debugMessageStream << TEXT('\"');
-	}	
+	}
 
-	const auto enginePath = Paths::GetBinariesDir() / TEXT("OwlEngine.exe");
+	const auto enginePath = EnginePaths::GetWorkingDir() / TEXT("OwlEngine.exe");
 	executeCrashReporter(logFilename, debugMessageStream.str(), enginePath);
 
 	exit(EXIT_FAILURE);
 }
 
-void CrashHandler::executeCrashReporter(const Path& logFilePath, const std::wstring& debugMessage,	const Path& enginePath)
+void CrashHandler::executeCrashReporter(const std::filesystem::path& logFilePath, const std::wstring& debugMessage,
+                                        const std::filesystem::path& enginePath)
 {
-	const auto arguments = std::format(TEXT("{} {} {}"), logFilePath.wstring(), debugMessage, enginePath.wstring());
-	const auto crashReporterPath = Paths::GetBinariesDir() / TEXT("CrashReporter.exe");
+	const auto arguments = std::format(TEXT("{} {} {}"), logFilePath.generic_wstring(), debugMessage,
+	                                   enginePath.wstring());
+	const auto crashReporterPath = EnginePaths::GetWorkingDir() / TEXT("CrashReporter.exe");
 
 	ShellExecute(nullptr, TEXT("open"), crashReporterPath.c_str(), arguments.c_str(), nullptr, SW_HIDE);
 }
